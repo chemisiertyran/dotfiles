@@ -1,1 +1,1 @@
-my dotfiles :)
+my dotfiles --mainly inspired from https://github.com/mathiasbynens/dotfiles
