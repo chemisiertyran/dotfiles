@@ -94,9 +94,11 @@ source $ZSH/oh-my-zsh.sh
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias ide="webstorm"
+alias zshrc="subl ~/Code/dotfiles/.zshrc"
 
 # Functions
 
+# Create a directory and change directory
 function mkd() {
   mkdir -p "$@" && cd "$_";
 }
@@ -109,3 +111,4 @@ function server() {
     # And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
     python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
+
